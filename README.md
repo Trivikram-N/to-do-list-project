@@ -1,15 +1,16 @@
-
 # To-Do List Project
 
-A simple and efficient To-Do List application developed to help users manage their daily tasks effectively.
+A simple and efficient To-Do List application developed to help users manage their daily tasks effectively.
 
 ## Features
 
 - **Add Tasks**: Easily add new tasks to your to-do list.
-- **Edit Tasks**: Modify existing tasks to keep your list up-to-date.
 - **Delete Tasks**: Remove tasks that are no longer needed.
 - **Mark as Complete**: Track completed tasks for better productivity.
 - **Persistent Storage**: Your tasks are saved locally, ensuring they remain even after refreshing the page.
+- **Progress bar**: You can see the progress of tasks completion.
+- **Uncheck all**: You can uncheck all tasks with a single click.
+- **Remove all**: Remove all tasks with a single click.
 
 ## Technologies Used
 
@@ -46,8 +47,9 @@ To run this project locally, you need a modern web browser (e.g., Chrome, Firefo
 
 1. **Add a Task**: Enter your task in the input field and click the "Add" button.
 2. **Edit a Task**: Click the "Edit" button next to the task you want to modify.
-3. **Delete a Task**: Click the "Delete" button to remove a task from your list.
-4. **Mark as Complete**: Click the checkbox next to a task to mark it as completed.
+3. **Delete a Task**: Click the "x" icon to remove a task from your list.
+4. **Mark as Complete**: Click the task to mark it as completed.
+5. **Uncheck all**: Click on uncheck button to repeat the tasks again.
 
 ## Contributing
 
