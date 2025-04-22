@@ -1,0 +1,224 @@
+
+/* basic declaration */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+/* layout declaration */
+.container{
+    padding: 16vh 0vh;
+    min-height: 68vh;
+    background: linear-gradient(135deg, rgba(91,34,195,1) 16%, rgba(253,45,181,1) 100%);
+}
+
+.wrapper{
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* heading */
+.heading{
+    font-size: 32px;
+    font-family: "Ubuntu", sans-serif;
+
+    color: white;
+}
+
+
+/* input box */
+.task-entry {
+    width: 40%;
+    max-width: 400px;
+    margin: 32px 0px;
+    
+    display: flex;
+    position: relative;
+}
+
+.task-entry .input{
+    font-size: 16px;
+    padding: 16px;
+    padding-right: 24px;
+    border-radius: 16px;
+    background-color: white;
+    font-family: "Spinnaker", sans-serif;
+
+    border: none;
+    outline: none;
+    
+    flex-grow: 1;
+}
+
+.task-entry .add{
+    font-size: 32px;
+    height: 64px;
+    width: 64px;
+
+    color: white;
+    border-radius: 50%;
+    background: #7f09ee;   
+    cursor: pointer;
+
+    border: none;
+    outline: none;
+    box-shadow: 0 0 16px rgb(78, 78, 78);
+    transition: box-shadow .4s, transform .4s;
+    
+    position: absolute;
+    right: -40px;
+    top: -8px;
+}
+
+
+/* tasks box */
+.box{
+    min-height: 64px;
+    width: 64%;
+    max-width: 640px;
+    padding: 16px;
+
+    border-radius: 16px;
+    background-color: #ffffff;
+}
+
+
+/* progress bar */
+.out-progress{
+    height: 16px;
+    width: 100%;
+
+    background-color: rgb(226, 226, 226);
+    border-radius: 8px;
+    margin-bottom: 16px;
+}
+
+.in-progress{
+    height: 100%;
+    width: 0px;
+
+    background-color: #7f09ee;
+    border-radius: 8px;
+
+    transition: width .8s;
+}
+
+
+/* default text */
+.default-text{
+    color: gray;
+    display: none;
+    font-family: "Spinnaker", sans-serif;
+    text-align: center;
+}
+
+
+/* lists decarations */
+.box li{
+    list-style: none;
+    font-family: "Spinnaker", sans-serif;
+    padding: 16px 64px;
+
+    border-radius: 8px;
+    position: relative;
+}
+
+.box li span{
+    color: white;
+    font-size: 12px;
+    text-align: center;
+    line-height: 23px;
+    cursor: pointer;
+
+    height: 24px;
+    width: 24px;
+
+    background-color: rgb(172, 172, 172);
+    border-radius: 50%;
+
+    position: absolute;
+    right: 16px;
+    top: 14px;
+}
+
+.box li:hover{
+    background-color: rgb(245, 245, 245);
+}
+
+
+/* uncompleted lists decaration */
+.box .list-box li::before{
+    content: '';
+    height: 24px;
+    width: 24px;
+
+    background-color: transparent;
+    border: 1px solid rgb(172, 172, 172);
+    border-radius: 50%;
+
+    position: absolute;
+    left: 16px;
+    top: 12px;
+}
+
+
+/* completed lists decaration */
+.box .list-box-completed li{
+    text-decoration: line-through;
+    color: gray;
+}
+
+.box .list-box-completed li::before{
+    content: '✔';
+    height: 24px;
+    width: 24px;
+
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    line-height: 24px;
+
+    background-color: rgb(255, 72, 0);
+    border: none;
+    border-radius: 50%;
+
+    position: absolute;
+    left: 16px;
+    top: 12px;
+}
+
+/* bottom buttons */
+.bottom-buttons{
+    width: 64%;
+    max-width: 640px;
+    padding-top: 16px;
+
+    display: flex;
+    justify-content: right;
+    gap: 16px;
+}
+
+.remove, .uncheck{
+    padding: 16px 24px;
+    border-radius: 16px;
+    border: none;
+    background: #7f09ee;
+    cursor: pointer;
+
+    color: white;
+    font-family: "Spinnaker", sans-serif;
+
+
+    transition: box-shadow .4s, transform .4s;
+}
+
+.remove:hover, .uncheck:hover, .add:hover{
+    box-shadow: 0px 8px 24px #242424b6;
+    transform: scale(1.1);
+}

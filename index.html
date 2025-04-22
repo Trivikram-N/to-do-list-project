@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Spinnaker&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+    <title>To-do-list page</title>
+</head>
+<body>
+    
+    <section class="container">
+        <div class="wrapper">
+            <div class="heading">
+                <h1>To-do-list &check;</h1>
+            </div>
+            <div class="task-entry">
+                <input type="text" class="input" placeholder="Enter your task">
+                <button class="add">+</button>
+            </div>
+            <div class="box">
+                <div class="out-progress"><div class="in-progress"></div></div>
+                <p class="default-text">No tasks here</p>
+                <ul class="list-box"></ul>
+                <ul class="list-box-completed"></ul>
+            </div>
+            <div class="bottom-buttons">
+                <button class="remove">Remove All</button>
+                <button class="uncheck">Uncheck All</button>
+            </div>
+        </div>
+    </section>
+
+    <script src="index.js"></script>
+</body>
+</html>
