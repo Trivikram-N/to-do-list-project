@@ -25,7 +25,7 @@
 
 /* heading */
 .heading{
-    font-size: 32px;
+    font-size: 1.5rem;
     font-family: "Ubuntu", sans-serif;
 
     color: white;
@@ -39,11 +39,12 @@
     margin: 32px 0px;
     
     display: flex;
+    justify-content: center;
     position: relative;
 }
 
 .task-entry .input{
-    font-size: 16px;
+    font-size: 1rem;
     padding: 16px;
     padding-right: 24px;
     border-radius: 16px;
@@ -57,7 +58,7 @@
 }
 
 .task-entry .add{
-    font-size: 32px;
+    font-size: 2rem;
     height: 64px;
     width: 64px;
 
@@ -72,7 +73,7 @@
     transition: box-shadow .4s, transform .4s;
     
     position: absolute;
-    right: -40px;
+    right: -60px;
     top: -8px;
 }
 
@@ -125,13 +126,15 @@
     font-family: "Spinnaker", sans-serif;
     padding: 16px 64px;
 
+    overflow: scroll;
+
     border-radius: 8px;
     position: relative;
 }
 
 .box li span{
     color: white;
-    font-size: 12px;
+    font-size: 0.75rem;
     text-align: center;
     line-height: 23px;
     cursor: pointer;
@@ -145,10 +148,6 @@
     position: absolute;
     right: 16px;
     top: 14px;
-}
-
-.box li:hover{
-    background-color: rgb(245, 245, 245);
 }
 
 
@@ -180,9 +179,9 @@
     width: 24px;
 
     color: white;
-    font-size: 14px;
+    font-size: 0.9rem;
     text-align: center;
-    line-height: 24px;
+    line-height: 1.5rem;
 
     background-color: rgb(255, 72, 0);
     border: none;
@@ -200,13 +199,17 @@
     padding-top: 16px;
 
     display: flex;
-    justify-content: right;
+    align-items:flex-end;
+    flex-direction: column-reverse;
+
     gap: 16px;
 }
 
 .remove, .uncheck{
     padding: 16px 24px;
     border-radius: 16px;
+    width: 160px;
+
     border: none;
     background: #7f09ee;
     cursor: pointer;
@@ -218,7 +221,30 @@
     transition: box-shadow .4s, transform .4s;
 }
 
-.remove:hover, .uncheck:hover, .add:hover{
-    box-shadow: 0px 8px 24px #242424b6;
-    transform: scale(1.1);
+
+
+
+/* for large screens */
+@media(min-width: 500px){
+    .heading{
+        font-size: 2rem;
+    }
+
+    .task-entry .add{
+        right: -40px;
+    }
+
+    .box li:hover{
+        background-color: rgb(245, 245, 245);
+    }
+    
+    .remove:hover, .uncheck:hover, .add:hover{
+        box-shadow: 0px 8px 24px #242424b6;
+        transform: scale(1.1);
+    }
+
+    .bottom-buttons{
+        flex-direction: row;
+        justify-content: right;
+    }
 }
