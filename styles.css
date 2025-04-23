@@ -8,7 +8,7 @@
 
 /* layout declaration */
 .container{
-    padding: 16vh 0vh;
+    padding: 16vh 0vw;
     min-height: 68vh;
     background: linear-gradient(135deg, rgba(91,34,195,1) 16%, rgba(253,45,181,1) 100%);
 }
@@ -126,7 +126,7 @@
     font-family: "Spinnaker", sans-serif;
     padding: 16px 64px;
 
-    overflow: scroll;
+    overflow: wrap;
 
     border-radius: 8px;
     position: relative;
