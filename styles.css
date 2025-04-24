@@ -243,6 +243,10 @@
         right: -60px;
     }
 
+    .box li:hover{
+        background-color: rgb(255, 255, 255);
+    }
+
     .bottom-buttons{
         align-items:flex-end;
         flex-direction: column-reverse;
