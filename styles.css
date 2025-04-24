@@ -25,7 +25,7 @@
 
 /* heading */
 .heading{
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-family: "Ubuntu", sans-serif;
 
     color: white;
@@ -73,7 +73,7 @@
     transition: box-shadow .4s, transform .4s;
     
     position: absolute;
-    right: -60px;
+    right: -40px;
     top: -8px;
 }
 
@@ -130,6 +130,10 @@
 
     border-radius: 8px;
     position: relative;
+}
+
+.box li:hover{
+    background-color: rgb(245, 245, 245);
 }
 
 .box li span{
@@ -199,8 +203,8 @@
     padding-top: 16px;
 
     display: flex;
-    align-items:flex-end;
-    flex-direction: column-reverse;
+    flex-direction: row;
+    justify-content: right;
 
     gap: 16px;
 }
@@ -221,30 +225,26 @@
     transition: box-shadow .4s, transform .4s;
 }
 
+.remove:hover, .uncheck:hover, .add:hover{
+    box-shadow: 0px 8px 24px #242424b6;
+    transform: scale(1.1);
+}
 
 
 
-/* for large screens */
-@media(min-width: 500px){
+
+/* for small screens */
+@media(max-width: 500px){
     .heading{
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
     .task-entry .add{
-        right: -40px;
-    }
-
-    .box li:hover{
-        background-color: rgb(245, 245, 245);
-    }
-    
-    .remove:hover, .uncheck:hover, .add:hover{
-        box-shadow: 0px 8px 24px #242424b6;
-        transform: scale(1.1);
+        right: -60px;
     }
 
     .bottom-buttons{
-        flex-direction: row;
-        justify-content: right;
+        align-items:flex-end;
+        flex-direction: column-reverse;
     }
 }
