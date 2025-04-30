@@ -108,6 +108,18 @@
     border-radius: 8px;
 
     transition: width .8s;
+    position: relative;
+}
+
+.progress-data{
+    font-family: "Spinnaker", sans-serif;
+    color: #7f09ee;
+    font-size: 0.8rem;
+
+    position: absolute;
+    left: 101%;
+
+    transition: left .8s;
 }
 
 

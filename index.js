@@ -4,11 +4,14 @@ const inputBox = document.querySelector(".input");
 
 const lists = document.querySelector(".list-box");
 const completedLists = document.querySelector(".list-box-completed");
+
 const progressBar = document.querySelector(".in-progress");
+const progressData = document.querySelector(".progress-data");
 
 const removeButton = document.querySelector(".remove");
 const uncheckButton = document.querySelector(".uncheck");
 
+const defaultTextView = document.querySelector(".default-text");
 
 
 // fetch stored data
@@ -110,14 +113,31 @@ function updateProgress(){
     let completed = completedLists.childElementCount;
     let total = lists.childElementCount + completed;
 
-    let defaultTextView = document.querySelector(".default-text");
-
     if(total == 0){
         progressBar.style.width = "0%";
+        progressData.style.display = "none";
+
         defaultTextView.style.display = "block";
     }
-    else{
-        progressBar.style.width = (completed/total * 100).toString() + "%";
+    else if(total == 1){
         defaultTextView.style.display = "none";
+        progressData.style.display = "block";
+        
+        changeBar(completed,total);
+    }
+    else{
+        changeBar(completed,total);
     } 
+}
+
+function changeBar(completed,total){
+        progressBar.style.width = (completed/total * 100).toString() + "%";
+        progressData.textContent = completed + "/" + total
+
+        if( completed/total > 0.9 ){
+            progressData.style.left = "90%"
+        }
+        else{
+            progressData.style.left = "101%"
+        }
 }
